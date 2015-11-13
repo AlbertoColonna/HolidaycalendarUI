@@ -1,0 +1,56 @@
+jQuery.sap.declare('dev.controls.serviceController');
+
+sap.ui.core.Control.extend('dev.controls.serviceController', {
+    read: function(service, successCallback, errorCallback, async) {
+        async = typeof sync !== "undefined" ? async : true;
+
+        var ajaxData = jQuery.ajax({
+            type : "GET",
+            contentType : "application/json;charset=UTF-8",
+            url : SERVICE_ENDPOINT + service,
+            dataType : "json",
+            async: async, 
+            success : function(data, textStatus, jqXHR) {
+                successCallback(data);
+            },
+            error : function() {
+                errorCallback();
+            }
+        });
+    },
+    write: function(service, data, successCallback, errorCallback, async) {
+        async = typeof sync !== "undefined" ? async : true;
+
+        var ajaxData = jQuery.ajax({
+            type : "POST",
+            contentType : "application/json;charset=UTF-8",
+            url : SERVICE_ENDPOINT + service,
+            data : data,
+            dataType : "json",
+            async: async, 
+            success : function(data, textStatus, jqXHR) {
+                successCallback(data);
+            },
+            error : function() {
+                errorCallback();
+            }
+        });
+    },
+    readData: function(path, successCallback, errorCallback, async) {
+        async = typeof sync !== "undefined" ? async : true;
+
+        var ajaxData = jQuery.ajax({
+            type : "GET",
+            contentType : "application/json;charset=UTF-8",
+            url : path,
+            dataType : "json",
+            async: async, 
+            success : function(data, textStatus, jqXHR) {
+                successCallback(data);
+            },
+            error : function() {
+                errorCallback();
+            }
+        });
+    },
+});
