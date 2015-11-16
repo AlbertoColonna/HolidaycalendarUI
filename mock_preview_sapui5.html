@@ -21,7 +21,7 @@ if (bRunWithMock) {
 jQuery.sap.require('sap.ui.core.util.MockServer');
 var uri = '/';
 var oMock = new sap.ui.core.util.MockServer({rootUri : uri});
-oMock.simulate('model/metadata.xml', { sMockdataBaseUrl : 'model/', bGenerateMissingMockData : true });
+oMock.simulate('model/metadata.xml');
 oMock.start();
 	jQuery(document).ready(function($) {  sap.m.MessageToast.show('Running in demo mode with mock data.', {  duration : 4000 });
 });
