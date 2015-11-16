@@ -3,14 +3,14 @@
 		<content>
 			<VBox direction="Column" id="__vbox0" justifyContent="Center" width="100%">
 				<items>
-					<Label id="__label3" text="Try out the Layout Editor and then click Run." textAlign="Center" width="100%"/>
+					<Label id="__label3" text="{date}" textAlign="Center" width="100%"/>
 				</items>
 			</VBox>
 			<Table id="__table0" items="{/Entity1_Set}" noDataText="Drop column list items here and columns in the area above">
 				<items>
 					<ColumnListItem counter="0" id="__item1">
 						<cells>
-							<Text id="__text5" maxLines="0" text="{Id}"/>
+							<Text id="__text5" maxLines="0" text="{date}"/>
 							<Text id="__text6" maxLines="0" text="{field1}"/>
 							<Text id="__text7" maxLines="0" text="{field2}"/></cells>
 					</ColumnListItem>

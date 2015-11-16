@@ -58,8 +58,10 @@ handleUploadComplete: function(oEvent) {
 		var oModel = new sap.ui.model.json.JSONModel();
 		this.getView().setModel(oModel);
 		oModel.loadData("/JERSEY1/rest/helloworld");	
+		 
+		//this.showMessage(""+oModel.getData());
 		
-		this.showMessage(""+oModel);
+		this.showMessage("Hallo");
 		
 		
     /* var url = "../Services/BatchFileUpload.xsjs";  
