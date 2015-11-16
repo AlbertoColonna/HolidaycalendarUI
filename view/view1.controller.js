@@ -16,6 +16,10 @@ sap.ui.controller("view.view1", {
 		var oModel = new sap.ui.model.json.JSONModel();
 		this.getView().setModel(oModel);
 		oModel.loadData("/JERSEY1/rest/helloworld");*/
+		
+		var oModel = new sap.ui.model.json.JSONModel();
+		this.getView().setModel(oModel);
+		oModel.loadData("/JERSEY1/rest/helloworld");				
 	}, 
  
 	
