@@ -7,7 +7,7 @@ sap.ui.controller("view.view1", {
 	 */
 	onInit: function() { 
 		// bundle model
-		var rootPath = jQuery.sap.getModulePath("par.ui");
+	/*	var rootPath = jQuery.sap.getModulePath("par.ui");
 		var i18nModel = new sap.ui.model.resource.ResourceModel({
 			bundleUrl : [ rootPath, "i18n/messageBundle.properties" ].join("/")
 		});
@@ -15,7 +15,7 @@ sap.ui.controller("view.view1", {
 		//view model
 		var oModel = new sap.ui.model.json.JSONModel();
 		this.getView().setModel(oModel);
-		oModel.loadData("/JERSEY1/rest/helloworld");
+		oModel.loadData("/JERSEY1/rest/helloworld");*/
 	},
  
 	
@@ -43,6 +43,17 @@ handleUploadComplete: function(oEvent) {
 				
 	
 	handleUploadPress: function(onEvent) {
+		
+		// bundle model
+		/*var rootPath = jQuery.sap.getModulePath("par.ui");*/
+	/*	var i18nModel = new sap.ui.model.resource.ResourceModel({
+			bundleUrl : [ rootPath, "i18n/messageBundle.properties" ].join("/")
+		});
+		sap.ui.getCore().setModel(i18nModel, "i18n");*/
+		//view model
+		var oModel = new sap.ui.model.json.JSONModel();
+		this.getView().setModel(oModel);
+		oModel.loadData("/JERSEY1/rest/helloworld");		
 		
 		
      /*  var url = "../Services/BatchFileUpload.xsjs";  
