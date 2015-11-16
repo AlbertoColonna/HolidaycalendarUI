@@ -8,11 +8,28 @@
       "ui5ActiveVersion": null,
       "ui5VerSource": null,
       "isDefaultVersion": 0,
-      "urlParameters": [],
+      "urlParameters": [
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
       "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "holidaydest",
+          "destinations": "holidaydest"
+        }
+      ],
       "_metadata": {
+        "id": 1052417,
         "runnerId": "webapprunner",
-        "id": 8754024,
         "displayName": "New Web Application"
       }
     }

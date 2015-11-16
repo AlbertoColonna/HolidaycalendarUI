@@ -19,7 +19,7 @@
       },
       "description": "SAPUI5 Test Resources"
     },
-   {
+    {
       "path": "/JERSEY1",
       "target": {
         "type": "destination",

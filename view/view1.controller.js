@@ -7,19 +7,10 @@ sap.ui.controller("view.view1", {
 	 */
 	onInit: function() { 
 		// bundle model
-	/*	var rootPath = jQuery.sap.getModulePath("par.ui");
-		var i18nModel = new sap.ui.model.resource.ResourceModel({
-			bundleUrl : [ rootPath, "i18n/messageBundle.properties" ].join("/")
-		});
-		sap.ui.getCore().setModel(i18nModel, "i18n");
-		//view model
-		var oModel = new sap.ui.model.json.JSONModel();
-		this.getView().setModel(oModel);
-		oModel.loadData("/JERSEY1/rest/helloworld");*/
 		
-		var oModel = new sap.ui.model.json.JSONModel();
+	/*	var oModel = new sap.ui.model.json.JSONModel();
 		this.getView().setModel(oModel);
-		oModel.loadData("/JERSEY1/rest/helloworld");				
+		oModel.loadData("/JERSEY1/rest/helloworld");				*/
 	}, 
  
 	
@@ -41,11 +32,11 @@ showMessage: function(msg)
 	});	
 },
 	
-handleUploadComplete: function(oEvent) {
-        
+handleUploadComplete: function(onEvent) {
+         
 		},	
-				
-	
+				 
+	 
 	handleUploadPress: function(onEvent) {
 		
 		// bundle model
@@ -55,13 +46,14 @@ handleUploadComplete: function(oEvent) {
 		});
 		sap.ui.getCore().setModel(i18nModel, "i18n");*/
 		//view model
-		var oModel = new sap.ui.model.json.JSONModel();
-		this.getView().setModel(oModel);
-		oModel.loadData("/JERSEY1/rest/helloworld");	
-		 
-		//this.showMessage(""+oModel.getData());
 		
-		this.showMessage("Hallo");
+	var oModel = new sap.ui.model.json.JSONModel();
+		this.getView().setModel(oModel);
+		oModel.loadData("/JERSEY1/rest/helloworld");				
+		
+				this.showMessage(""+oModel); 
+
+		
 		
 		
     /* var url = "../Services/BatchFileUpload.xsjs";  
