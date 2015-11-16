@@ -16,7 +16,7 @@ sap.ui.controller("view.view1", {
 		var oModel = new sap.ui.model.json.JSONModel();
 		this.getView().setModel(oModel);
 		oModel.loadData("/JERSEY1/rest/helloworld");*/
-	},
+	}, 
  
 	
 showMessage: function(msg)
@@ -56,7 +56,7 @@ handleUploadComplete: function(oEvent) {
 		oModel.loadData("/JERSEY1/rest/helloworld");		
 		
 		
-     /*  var url = "../Services/BatchFileUpload.xsjs";  
+    /* var url = "../Services/BatchFileUpload.xsjs";  
         var fileLoader =  this.byId('fileUploader');
         var fileName = fileLoader.getValue();  
          
