@@ -19,14 +19,13 @@
       },
       "description": "SAPUI5 Test Resources"
     },
-    {
-      "path": "/JERSEY1/rest/helloworld/",
+   {
+      "path": "/JERSEY1",
       "target": {
         "type": "destination",
-        "name": "holidaydest",
-        "entryPath": "JERSEY1/rest/helloworld/"
+        "name": "holidaydest"
       },
-      "description": "holiday"
+      "description": "Holiday destination"
     }
   ],
   "cacheControl": [

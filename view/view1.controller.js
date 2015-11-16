@@ -6,55 +6,18 @@ sap.ui.controller("view.view1", {
 	 * @memberOf view.View1
 	 */
 	onInit: function() { 
-		this.initTodoModel();
+		// bundle model
+		var rootPath = jQuery.sap.getModulePath("par.ui");
+		var i18nModel = new sap.ui.model.resource.ResourceModel({
+			bundleUrl : [ rootPath, "i18n/messageBundle.properties" ].join("/")
+		});
+		sap.ui.getCore().setModel(i18nModel, "i18n");
+		//view model
+		var oModel = new sap.ui.model.json.JSONModel();
+		this.getView().setModel(oModel);
+		oModel.loadData("/JERSEY1/rest/helloworld");
 	},
-
-	/**
-	 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-	 * (NOT before the first rendering! onInit() is used for that one!).
-	 * @memberOf view.View1
-	 */
-	//	onBeforeRendering: function() {
-	//
-	//	},
-
-	/**
-	 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-	 * This hook is the same one that SAPUI5 controls get after being rendered.
-	 * @memberOf view.View1
-	 */
-	//	onAfterRendering: function() {
-	//
-	//	},
-
-	/**
-	 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-	 * @memberOf view.View1
-	 */
-	//	onExit: function() {
-	//
-	//	}
-	
- initTodoModel : function() {  
- 	
-        var oModel = new sap.ui.model.json.JSONModel();
-        
-       var aData = jQuery.ajax({
-            type : "GET",
-            contentType : "application/json",
-            url : "https://holiday1a2ae72c92.hana.ondemand.com/JERSEY1/rest/helloworld/",
-            dataType : "json",
-            async: false, 
-            success : function(data,textStatus, jqXHR) {
-                oModel.setData({modelData : data}); 
-				sap.ui.getCore().setModel(oModel);    
-				console.log("TETET");
-            }
-
-        });
-
-        return oModel;  
-    },
+ 
 	
 showMessage: function(msg)
 {
@@ -82,11 +45,9 @@ handleUploadComplete: function(oEvent) {
 	handleUploadPress: function(onEvent) {
 		
 		
-        var url = "../Services/BatchFileUpload.xsjs";  
+     /*  var url = "../Services/BatchFileUpload.xsjs";  
         var fileLoader =  this.byId('fileUploader');
         var fileName = fileLoader.getValue();  
-        
-        this.showMessage(this.initTodoModel().getData());
          
         if (fileName === "" )  
         {  
@@ -99,9 +60,7 @@ handleUploadComplete: function(oEvent) {
     	   
            fileLoader.setUploadUrl(url);  
            fileLoader.upload();  
-        }  
+        }  */
 	}
 
 });
-
-
