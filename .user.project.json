@@ -5,9 +5,9 @@
       "previewMode": 0,
       "dataMode": 0,
       "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
-      "ui5VerSource": null,
-      "isDefaultVersion": 0,
+      "ui5ActiveVersion": "1.32.4",
+      "ui5VerSource": "external",
+      "isDefaultVersion": 1,
       "urlParameters": [
         {
           "paramName": "",

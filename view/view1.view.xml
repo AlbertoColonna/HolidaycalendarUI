@@ -23,7 +23,7 @@
 					</Column>
 					<Column id="__column1">
 						<header>
-							<Label id="__label1" text="{/date}"/>
+							<Label id="__label1" text="{/field1}"/>
 						</header>
 					</Column>
 					<Column id="__column2">
