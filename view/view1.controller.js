@@ -47,7 +47,7 @@ handleUploadComplete: function(onEvent) {
 		sap.ui.getCore().setModel(i18nModel, "i18n");*/
 		//view model
 		
-	var oModel = new sap.ui.model.json.JSONModel();
+	var oModel = new sap.ui.model.json.JSONModel(); 
 		this.getView().setModel(oModel);
 		oModel.loadData("/JERSEY1/rest/helloworld");   
 				this.showMessage("Hallo"+oModel); 
